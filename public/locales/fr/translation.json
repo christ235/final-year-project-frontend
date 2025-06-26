@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "transportation": "Transport",
+    "shopping": "Shopping",
+    "delivery": "Livraison",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "searchRoutes": "Rechercher des itinéraires",
+    "browseProducts": "Parcourir les produits",
+    "requestDelivery": "Demander une livraison"
+  },
+  "hero": {
+    "welcome": "Bienvenue sur ChadLink",
+    "subtitle": "Votre plateforme intégrée de services publics",
+    "description": "Connectez-vous, achetez, voyagez et livrez avec la première plateforme numérique du Tchad",
+    "getStarted": "Commencer",
+    "login": "Connexion"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Tout ce dont vous avez besoin sur une seule plateforme intégrée",
+    "transportation": "Transport",
+    "transportationDesc": "Réservez des billets de bus, gérez les itinéraires et voyagez à travers le Tchad avec des agences de transport de confiance.",
+    "ecommerce": "E-Commerce",
+    "ecommerceDesc": "Achetez auprès de vendeurs locaux, découvrez des produits uniques et soutenez les entreprises tchadiennes.",
+    "delivery": "Livraison",
+    "deliveryDesc": "Services de livraison rapides et fiables pour vos colis et commandes e-commerce.",
+    "exploreRoutes": "Explorer les itinéraires",
+    "startShopping": "Commencer les achats",
+    "requestDelivery": "Demander une livraison"
+  },
+  "featured": {
+    "popularRoutes": "Itinéraires populaires",
+    "featuredProducts": "Produits en vedette",
+    "viewAll": "Voir tout",
+    "bookNow": "Réserver maintenant",
+    "addToCart": "Ajouter au panier",
+    "seatsLeft": "places restantes"
+  },
+  "cta": {
+    "title": "Prêt à commencer?",
+    "subtitle": "Rejoignez des milliers d'utilisateurs qui font confiance à ChadLink pour leurs besoins quotidiens",
+    "joinCustomer": "Rejoindre en tant que client",
+    "becomePartner": "Devenir partenaire"
+  },
+  "stats": {
+    "services": "Services intégrés",
+    "availability": "Disponibilité de la plateforme",
+    "languages": "Langues prises en charge",
+    "platform": "Plateforme unifiée"
+  },
+
+  "auth": {
+    "login": {
+      "title": "Bon Retour",
+      "subtitle": "Connectez-vous à votre compte ChadLink",
+      "email": "Adresse Email",
+      "password": "Mot de Passe",
+      "loginButton": "Se Connecter",
+      "forgotPassword": "Mot de passe oublié?",
+      "noAccount": "Vous n'avez pas de compte?",
+      "signUp": "S'inscrire",
+      "rememberMe": "Se souvenir de moi"
+    },
+    "signup": {
+      "title": "Rejoindre ChadLink",
+      "subtitle": "Créez votre compte et commencez à explorer",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Adresse Email",
+      "password": "Mot de Passe",
+      "confirmPassword": "Confirmer le Mot de Passe",
+      "phone": "Numéro de Téléphone",
+      "signupButton": "Créer un Compte",
+      "haveAccount": "Vous avez déjà un compte?",
+      "signIn": "Se Connecter",
+      "terms": "J'accepte les Conditions d'Utilisation et la Politique de Confidentialité"
+    },
+    "forgotPassword": {
+      "title": "Réinitialiser le Mot de Passe",
+      "subtitle": "Entrez votre email pour recevoir les instructions",
+      "email": "Adresse Email",
+      "resetButton": "Envoyer le Lien",
+      "backToLogin": "Retour à la Connexion",
+      "success": "Lien envoyé! Vérifiez votre email."
+    },
+    "validation": {
+      "required": "Ce champ est requis",
+      "invalidEmail": "Veuillez entrer un email valide",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "invalidPhone": "Veuillez entrer un numéro de téléphone valide"
+    }
+  }
+}

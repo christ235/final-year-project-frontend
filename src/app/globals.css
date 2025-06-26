@@ -1,26 +1,311 @@
 @import "tailwindcss";
 
 :root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --chad-gold: #FFD700;
+  --chad-blue: #0033A0;
+  --chad-red: #CC0000;
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
+  
+  /* Additional theme variables */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary-color);
+  --color-chad-gold: var(--chad-gold);
+  --color-chad-blue: var(--chad-blue);
+  --color-chad-red: var(--chad-red);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark mode variables */
+:root.dark {
+  --primary-color: #4fa8ff;
+  --secondary-color: #8e9aaf;
+  --success-color: #4ade80;
+  --danger-color: #ef4444;
+  --warning-color: #facc15;
+  --info-color: #06b6d4;
+  --light-color: #1f2937;
+  --dark-color: #f9fafb;
+  --chad-gold: #fbbf24;
+  --chad-blue: #3b82f6;
+  --chad-red: #ef4444;
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  
+  /* Update theme variables for dark mode */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary-color);
+  --color-chad-gold: var(--chad-gold);
+  --color-chad-blue: var(--chad-blue);
+  --color-chad-red: var(--chad-red);
 }
 
 body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
   background: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Custom gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--chad-blue), var(--primary-color));
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, var(--success-color), #1e7e34);
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(135deg, var(--warning-color), #e0a800);
+}
+
+/* Dark mode gradient adjustments */
+.dark .bg-gradient-primary {
+  background: linear-gradient(135deg, var(--chad-blue), var(--primary-color));
+}
+
+.dark .bg-gradient-success {
+  background: linear-gradient(135deg, var(--success-color), #16a34a);
+}
+
+.dark .bg-gradient-warning {
+  background: linear-gradient(135deg, var(--warning-color), #eab308);
+}
+
+/* Hero section pattern */
+.hero-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+  background-size: 50px 50px;
+}
+
+/* Dark mode hero pattern */
+.dark .hero-pattern::before {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+  background-size: 50px 50px;
+}
+
+/* Neumorphism styles */
+.neumorphic {
+  background: #e0e5ec;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #ffffff;
+}
+
+.neumorphic-inset {
+  background: #e0e5ec;
+  border-radius: 20px;
+  box-shadow: inset 10px 10px 20px #a3b1c6, inset -10px -10px 20px #ffffff;
+}
+
+.neumorphic-button {
+  background: #e0e5ec;
+  border-radius: 15px;
+  box-shadow: 8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff;
+  transition: all 0.3s ease;
+}
+
+.neumorphic-button:active {
+  box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
+}
+
+/* Dark mode neumorphism */
+.dark .neumorphic {
+  background: #1e293b;
+  box-shadow: 10px 10px 20px #0f172a, -10px -10px 20px #334155;
+}
+
+.dark .neumorphic-inset {
+  background: #1e293b;
+  box-shadow: inset 10px 10px 20px #0f172a, inset -10px -10px 20px #334155;
+}
+
+.dark .neumorphic-button {
+  background: #1e293b;
+  box-shadow: 8px 8px 16px #0f172a, -8px -8px 16px #334155;
+}
+
+.dark .neumorphic-button:active {
+  box-shadow: inset 5px 5px 10px #0f172a, inset -5px -5px 10px #334155;
+}
+
+/* Additional gradient backgrounds */
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Dark mode gradient adjustments */
+.dark .bg-gradient-secondary {
+  background: linear-gradient(135deg, #ec4899 0%, #ef4444 100%);
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Card styles with dark mode support */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .card {
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Input styles with dark mode */
+.input {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dark .input {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: var(--foreground);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 168, 255, 0.1);
+}
+
+/* Button variants with dark mode */
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.9);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.dark .btn-secondary {
+  background: #475569;
+  color: #f1f5f9;
+}
+
+/* RTL support for Arabic */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .ml-2 { margin-left: 0; margin-right: 0.5rem; }
+[dir="rtl"] .mr-2 { margin-right: 0; margin-left: 0.5rem; }
+[dir="rtl"] .ml-3 { margin-left: 0; margin-right: 0.75rem; }
+[dir="rtl"] .mr-3 { margin-right: 0; margin-left: 0.75rem; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-color);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Theme transition utilities */
+.theme-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus states for accessibility */
+.focus-ring:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.dark .focus-ring:focus {
+  outline-color: var(--primary-color);
 }

@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Home",
+    "transportation": "Transportation",
+    "shopping": "Shopping",
+    "delivery": "Delivery",
+    "login": "Login",
+    "register": "Register",
+    "searchRoutes": "Search Routes",
+    "browseProducts": "Browse Products",
+    "requestDelivery": "Request Delivery"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your ChadLink account",
+      "email": "Email Address",
+      "password": "Password",
+      "loginButton": "Sign In",
+      "forgotPassword": "Forgot Password?",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign Up",
+      "rememberMe": "Remember me"
+    },
+    "signup": {
+      "title": "Join ChadLink",
+      "subtitle": "Create your account and start exploring",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "phone": "Phone Number",
+      "signupButton": "Create Account",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign In",
+      "terms": "I agree to the Terms of Service and Privacy Policy"
+    },
+    "forgotPassword": {
+      "title": "Reset Password",
+      "subtitle": "Enter your email to receive reset instructions",
+      "email": "Email Address",
+      "resetButton": "Send Reset Link",
+      "backToLogin": "Back to Login",
+      "success": "Reset link sent! Check your email."
+    },
+    "validation": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email",
+      "passwordTooShort": "Password must be at least 8 characters",
+      "passwordMismatch": "Passwords do not match",
+      "invalidPhone": "Please enter a valid phone number"
+    }
+  },
+  "hero": {
+    "welcome": "Welcome to ChadLink",
+    "subtitle": "Your integrated public services platform",
+    "description": "Connect, shop, travel, and deliver with Chad's premier digital platform",
+    "getStarted": "Get Started",
+    "login": "Login"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Everything you need in one integrated platform",
+    "transportation": "Transportation",
+    "transportationDesc": "Book bus tickets, manage routes, and travel across Chad with trusted transport agencies.",
+    "ecommerce": "E-Commerce",
+    "ecommerceDesc": "Shop from local vendors, discover unique products, and support Chadian businesses.",
+    "delivery": "Delivery",
+    "deliveryDesc": "Fast and reliable delivery services for your packages and e-commerce orders.",
+    "exploreRoutes": "Explore Routes",
+    "startShopping": "Start Shopping",
+    "requestDelivery": "Request Delivery"
+  },
+  "featured": {
+    "popularRoutes": "Popular Routes",
+    "featuredProducts": "Featured Products",
+    "viewAll": "View All",
+    "bookNow": "Book Now",
+    "addToCart": "Add to Cart",
+    "seatsLeft": "seats left"
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Join thousands of users who trust ChadLink for their daily needs",
+    "joinCustomer": "Join as Customer",
+    "becomePartner": "Become a Partner"
+  },
+  "stats": {
+    "services": "Integrated Services",
+    "availability": "Platform Availability",
+    "languages": "Supported Languages",
+    "platform": "Unified Platform"
+  }
+}
